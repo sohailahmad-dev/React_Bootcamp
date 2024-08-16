@@ -1,32 +1,38 @@
 <!-- ! sign is used in vs code to create html basic boiler plate -->
 <html>
-  <head>
-    <title>Calculator</title>
-    <link rel="stylesheet" href="./styling/style.css">
-  </head>
-  <body>
-        <div class="calculator">
-            <div>
-                <input type="text" class="screen">
-            </div>
-            <div class="btnsDiv">
-                <button id="clear">C</button>
-                <button>1</button>
-                <button>2</button>
-                <button class="operator" >+</button>
-                <button>3</button>
-                <button>4</button>
-                <button>5</button>
-                <button class="operator" >-</button>
-                <button>6</button>
-                <button>7</button>
-                <button>8</button>
-                <button class="operator">*</button>
-                <button>9</button>
-                <button>0</button>
-                <button>=</button>
-                <button class="operator">/</button>
-            </div>
-        </div>
-  </body>  
+
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <div class="calculator">
+    <div>
+      <input type="text" class="screen" id="screen">
+    </div>
+    <div class="btnsDiv">
+      <button onclick="clearVal()" id="clear">C</button>
+      <button onclick="btnClick(1)">1</button>
+      <button onclick="btnClick(2)">2</button>
+      <button onclick="btnClick('+')" class="operator">+</button>
+      <button onclick="btnClick(3)">3</button>
+      <button onclick="btnClick(4)">4</button>
+      <button onclick="btnClick(5)">5</button>
+      <button onclick="btnClick('-')" class="operator">-</button>
+      <button onclick="btnClick(6)">6</button>
+      <button onclick="btnClick(7)">7</button>
+      <button onclick="btnClick(8)">8</button>
+      <button onclick="btnClick('*')" class="operator">*</button>
+      <button onclick="btnClick(9)">9</button>
+      <button onclick="btnClick(0)">0</button>
+      <button onclick="calculate()">=</button>
+      <button onclick="btnClick('/')" class="operator">/</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+
 </html>

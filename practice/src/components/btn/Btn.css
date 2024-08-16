@@ -1,0 +1,15 @@
+.btn {
+    background-color: green;
+    font-size: 20px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 8px 20px;
+    color: white;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
