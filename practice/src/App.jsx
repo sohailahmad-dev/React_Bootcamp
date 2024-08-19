@@ -1,35 +1,70 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import './App.css'
 import { Btn } from "./components/btn/Btn";
 import InputField from "./components/InputField/InputField"
+import Card from "./components/card/Card";
+import Button from '@mui/material/Button';
+import { TextField } from "@mui/material";
 
 export default function App() {
 
-  let [name, setName] = useState('M Shumail');
+
+  let [dataObj, setDataObj] = useState({
+    name: '',
+    error: '',
+    disableBtn: true
+  })
 
 
 
-
-
-  const handleLogin = () => {
-    setName('Irtaza Azeem')
+  const handleInput = (input) => {
+    // dataObj['name'] = input.target.value;
+    dataObj.name = input.target.value;
+    setDataObj({ ...dataObj });
   }
+
+
+  const validateInput = () => {
+    if (name == '') {
+      dataObj.error = 'Username is required';
+      dataObj.disableBtn = true;
+      setDataObj({ ...dataObj })
+    } else if (name.length < 5) {
+      dataObj.error = 'Name must be at least five character long.';
+      dataObj.disableBtn = true;
+      setDataObj({ ...dataObj })
+    }
+    else {
+      dataObj.error = 'All Ok';
+      dataObj.disableBtn = false;
+      setDataObj({ ...dataObj })
+    }
+  }
+
+  useEffect(() => {
+    validateInput();
+  }, [dataObj.name]);
+
+
+
 
 
   return (
     <>
-      <h1>{name}</h1>
-      <br /> <br />
-      <Btn
-        label='Login'
-        func={handleLogin}
-      />
-      <Btn
-        label='Create Account'
-        func={() => alert('in create Account')}
+      {/* <Card /> */}
+      <h1>{dataObj.name}</h1>
+      <p>{dataObj.error}</p>
+      <TextField
+        label='Name'
+        onChange={(s) => handleInput(s)}
       />
 
-      <Btn />
+      <Button
+        variant="contained"
+        disabled={dataObj.disableBtn}
+      >Click Me</Button>
+
+
 
     </>
   )
