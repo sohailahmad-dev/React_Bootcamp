@@ -25,11 +25,11 @@ export default function App() {
 
 
   const validateInput = () => {
-    if (name == '') {
+    if (dataObj.name == '') {
       dataObj.error = 'Username is required';
       dataObj.disableBtn = true;
       setDataObj({ ...dataObj })
-    } else if (name.length < 5) {
+    } else if (dataObj.name.length < 5) {
       dataObj.error = 'Name must be at least five character long.';
       dataObj.disableBtn = true;
       setDataObj({ ...dataObj })
