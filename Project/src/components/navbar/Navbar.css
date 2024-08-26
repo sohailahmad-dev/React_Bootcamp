@@ -34,14 +34,18 @@
     .nb-links {
         position: fixed;
         top: 60px;
-        /* left: -300px; */
-        right: 0px;
-        background-color: gray;
+        right: -300px;
+        background-color: #0F2928;
         flex-direction: column;
         height: calc(100vh - 60px);
         width: 250px;
         padding-left: 20px;
         padding-top: 20px;
+        transition: 0.8s ease;
+    }
+
+    .nb-active {
+        right: 0px;
     }
 
     #nb-mobile-btn {
@@ -54,13 +58,5 @@
 
     .nb-icon {
         display: block;
-    }
-}
-
-@media screen and (min-width:1200px) {
-    .box {
-        width: 100px;
-        height: 100px;
-        background-color: red;
     }
 }

@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Navbar.css'
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 export default function Navbar() {
     const links = [
@@ -41,11 +42,12 @@ export default function Navbar() {
         },
     ]
 
+    let [menu, setMenu] = useState(false);
 
     return (
         <div className='nb'>
             <div className='nb-logo-text'>Insider's Inventory</div>
-            <div className='nb-links'>
+            <div className={menu ? 'nb-links nb-active' : 'nb-links'} >
                 {
                     links.map((item) => (
                         <div key={item?.id} >{item?.name}</div>
@@ -61,8 +63,10 @@ export default function Navbar() {
                 <button>Get Started</button>
             </div>
             {/* menu icon for mobile  */}
-            <div className="nb-icon">
-                <MenuIcon />
+            <div
+                onClick={() => setMenu(!menu)}
+                className="nb-icon">
+                {menu ? <CloseIcon /> : <MenuIcon />}
             </div>
         </div>
     )

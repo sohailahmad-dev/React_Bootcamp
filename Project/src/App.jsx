@@ -6,8 +6,6 @@ export default function App() {
   return (
     <div>
       <Navbar />
-
-      <div className="box"></div>
     </div>
   )
 }
