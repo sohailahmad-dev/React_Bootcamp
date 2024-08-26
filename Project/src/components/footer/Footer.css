@@ -6,13 +6,15 @@
     border-radius: 20px;
     z-index: 11;
     position: relative;
+    margin-top: 600px;
 }
 
 .footer-building {
-    width: 400px;
+    width: 40%;
     position: absolute;
     bottom: 0px;
     left: 0px;
+
 }
 
 .box {
