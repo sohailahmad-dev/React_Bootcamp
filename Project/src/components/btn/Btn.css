@@ -1,0 +1,13 @@
+.btn {
+    background-color: #4DAD49;
+    border: 1px solid #4DAD49;
+    color: white;
+    height: 45px;
+    border-radius: 30px;
+    padding: 0px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}

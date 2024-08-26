@@ -8,6 +8,16 @@
     padding: 0px 5%;
 }
 
+.nb-logo-text {
+    font-size: 20px;
+}
+
+.nb-logo-text span {
+    color: #4DAD49;
+}
+
+
+
 .nb-links {
     display: flex;
     gap: 20px;
@@ -40,6 +50,7 @@
         height: calc(100vh - 60px);
         width: 250px;
         padding-left: 20px;
+        padding-right: 20px;
         padding-top: 20px;
         transition: 0.8s ease;
     }

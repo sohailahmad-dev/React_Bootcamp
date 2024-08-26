@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import './Navbar.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import Btn from '../btn/Btn';
 
 export default function Navbar() {
     const links = [
@@ -46,7 +47,7 @@ export default function Navbar() {
 
     return (
         <div className='nb'>
-            <div className='nb-logo-text'>Insider's Inventory</div>
+            <div className='nb-logo-text'>Insider's <span>Inventory</span></div>
             <div className={menu ? 'nb-links nb-active' : 'nb-links'} >
                 {
                     links.map((item) => (
@@ -55,12 +56,13 @@ export default function Navbar() {
                 }
                 {/* btn for mobile  */}
                 <div className="nb-btn" id='nb-mobile-btn' >
-                    <button>Get Started</button>
+                    <Btn label='Login/Signup' />
                 </div>
 
             </div>
             <div className="nb-btn" id='nb-desktop-btn' >
-                <button>Get Started</button>
+                <Btn label='Login/Signup' />
+
             </div>
             {/* menu icon for mobile  */}
             <div
