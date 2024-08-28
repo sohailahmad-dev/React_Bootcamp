@@ -4,7 +4,11 @@ import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 
 export default function Btn({ label, onClick, style }) {
     return (
-        <div className='btn' style={style}>
+        <div
+            onClick={onClick}
+            className='btn'
+            style={style}
+        >
             {label}
             <ArrowOutwardIcon
                 fontSize='small'
