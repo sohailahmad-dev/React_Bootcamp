@@ -1,0 +1,43 @@
+.card {
+    border: 1px solid lightgray;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.card-img {
+    width: 100%;
+    border-radius: 10px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.card-status {
+    background-color: #0F2928;
+    color: white;
+    font-size: 12px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.card-distribution {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 3px 10px 20px rgba(0, 0, 0, 0.1);
+    margin: 0px 7%;
+    margin-top: -30px;
+    z-index: 1211;
+    min-height: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-section {
+    padding: 10px 20px;
+}

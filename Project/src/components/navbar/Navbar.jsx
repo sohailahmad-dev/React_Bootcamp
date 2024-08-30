@@ -3,6 +3,7 @@ import './Navbar.css'
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import Btn from '../btn/Btn';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
     const links = [
@@ -42,8 +43,13 @@ export default function Navbar() {
             to: '/'
         },
     ]
+    const navigate = useNavigate();
 
     let [menu, setMenu] = useState(false);
+
+    const handleLogin = () => {
+        navigate('/SignIn')
+    }
 
     return (
         <div className='nb'>
@@ -56,12 +62,17 @@ export default function Navbar() {
                 }
                 {/* btn for mobile  */}
                 <div className="nb-btn" id='nb-mobile-btn' >
-                    <Btn label='Login/Signup' />
+                    <Btn
+                        onClick={handleLogin}
+                        label='Login/Signup' />
                 </div>
 
             </div>
             <div className="nb-btn" id='nb-desktop-btn' >
-                <Btn label='Login/Signup' />
+                <Btn
+                    onClick={handleLogin}
+                    label='Login/Signup'
+                />
 
             </div>
             {/* menu icon for mobile  */}

@@ -2,8 +2,9 @@ import React from 'react'
 import './Home.css'
 import Navbar from '../../components/navbar/Navbar'
 import Btn from '../../components/btn/Btn'
-import { colors } from '@mui/material'
 import Footer from '../../components/footer/Footer'
+import { Grid } from '@mui/material'
+import Card from '../../components/card/Card'
 
 export default function Home() {
     return (
@@ -27,6 +28,21 @@ export default function Home() {
                         label='View our Off-Market Inventory'
                     />
                 </div>
+            </section>
+            {/* section 2  */}
+            <section className="padding">
+                <Grid container spacing={3}>
+                    <Grid item sm={4} xs={12}>
+                        <Card />
+                    </Grid>
+                    <Grid item sm={4} xs={12}>
+                        <Card />
+                    </Grid>
+                    <Grid item sm={4} xs={12}>
+                        <Card />
+                    </Grid>
+
+                </Grid>
             </section>
             <div className="h-sec2 padding"></div>
             {/* footer  */}
