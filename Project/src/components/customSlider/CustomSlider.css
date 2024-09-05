@@ -1,0 +1,11 @@
+.custom-slider-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.custom-slider-icons img {
+    width: 40px;
+    cursor: pointer;
+}

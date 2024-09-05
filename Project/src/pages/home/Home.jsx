@@ -5,6 +5,7 @@ import Btn from '../../components/btn/Btn'
 import Footer from '../../components/footer/Footer'
 import { Grid } from '@mui/material'
 import Card from '../../components/card/Card'
+import CustomSlider from '../../components/customSlider/CustomSlider'
 
 export default function Home() {
     return (
@@ -31,18 +32,7 @@ export default function Home() {
             </section>
             {/* section 2  */}
             <section className="padding">
-                <Grid container spacing={3}>
-                    <Grid item sm={4} xs={12}>
-                        <Card />
-                    </Grid>
-                    <Grid item sm={4} xs={12}>
-                        <Card />
-                    </Grid>
-                    <Grid item sm={4} xs={12}>
-                        <Card />
-                    </Grid>
-
-                </Grid>
+                <CustomSlider />
             </section>
             <div className="h-sec2 padding"></div>
             {/* footer  */}

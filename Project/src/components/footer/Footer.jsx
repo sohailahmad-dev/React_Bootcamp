@@ -4,9 +4,11 @@ import building from '../../assets/imgs/building.png'
 import { Grid } from '@mui/material'
 import Btn from '../btn/Btn'
 import InputField from '../InputField/InputField'
+import useDeviceType from '../../hooks/useDeviceType'
 
 export default function Footer() {
     let [userObj, setUserObj] = useState({});
+    let isMobile = useDeviceType();
 
     const handleInput = (key, value) => {
         userObj[key] = value;
@@ -22,10 +24,9 @@ export default function Footer() {
         <div className='footer'>
             <div className="footer-upper footer-building-margin">
                 <img src={building} alt="building-img" className='footer-building' />
-
-                <Grid container spacing={1}>
-                    <Grid item xs={4}>
-                    </Grid>
+                <Grid container spacing={5}>
+                    {!isMobile && <Grid item xs={4} sx={{ color: 'white' }}>
+                    </Grid>}
                     <Grid item sm={8} xs={12}>
                         <div className='footer-upper-right'>
                             <div className="footer-heading">Signup for the Latest Deals</div>
