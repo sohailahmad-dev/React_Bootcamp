@@ -41,7 +41,7 @@
     gap: 20px;
 }
 
-.footer-heaing {
+.footer-heading {
     font-size: 28px;
     font-weight: bold;
 }
@@ -66,5 +66,15 @@
 @media screen and (min-width: 1600px) {
     .footer-building-margin {
         margin-top: 550px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .footer-building {
+        display: none;
+    }
+
+    .footer-upper-right {
+        padding: 20px 10%;
     }
 }

@@ -35,3 +35,31 @@
     display: flex;
     gap: 20px;
 }
+
+@media screen and (max-width:700px) {
+    .h-sec1 {
+        padding: 10%;
+    }
+
+    .h-sec1-subHeading {
+        font-size: 16px;
+    }
+
+    .h-sec1-mainHeading {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .h-sec1-text {
+        font-size: 14px;
+        text-align: center;
+        line-height: 20px;
+        padding: 0%;
+    }
+
+    .h-sec1-btns {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}

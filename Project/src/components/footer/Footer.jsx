@@ -23,13 +23,12 @@ export default function Footer() {
             <div className="footer-upper footer-building-margin">
                 <img src={building} alt="building-img" className='footer-building' />
 
-                <Grid container spacing={5}>
+                <Grid container spacing={1}>
                     <Grid item xs={4}>
-
                     </Grid>
                     <Grid item sm={8} xs={12}>
                         <div className='footer-upper-right'>
-                            <div className="footer-heaing">Signup for the Latest Deals</div>
+                            <div className="footer-heading">Signup for the Latest Deals</div>
                             <div className="footer-text">By joining our mailing list, you'll receive the latest updates and opportunities in investment properties directly to your inbox.</div>
                             <div style={{ width: '100%' }} >
                                 <Grid container spacing={2}>

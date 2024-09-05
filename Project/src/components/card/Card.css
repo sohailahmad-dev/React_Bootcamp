@@ -41,3 +41,13 @@
 .card-section {
     padding: 10px 20px;
 }
+
+.card-main-content {
+    margin: 20px 10px;
+}
+
+@media screen and (max-width:800px) {
+    .card-img {
+        height: 200px;
+    }
+}
