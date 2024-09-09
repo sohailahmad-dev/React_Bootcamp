@@ -26,6 +26,21 @@
     left: 10px;
 }
 
+.card-current-status {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 12px;
+    transform: rotate(-30deg);
+}
+
 .card-distribution {
     position: relative;
     background-color: white;

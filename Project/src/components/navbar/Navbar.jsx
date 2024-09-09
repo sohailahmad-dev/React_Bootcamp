@@ -15,7 +15,7 @@ export default function Navbar() {
         {
             id: 2,
             name: 'Buyers',
-            to: '/'
+            to: '/Buyers'
         },
         {
             id: 3,
@@ -57,7 +57,13 @@ export default function Navbar() {
             <div className={menu ? 'nb-links nb-active' : 'nb-links'} >
                 {
                     links.map((item) => (
-                        <div key={item?.id} >{item?.name}</div>
+                        <div
+                            className='nb-link'
+                            key={item?.id}
+                            onClick={() => navigate(item?.to)}
+                        >
+                            {item?.name}
+                        </div>
                     ))
                 }
                 {/* btn for mobile  */}

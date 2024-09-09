@@ -1,16 +1,22 @@
 import React from 'react'
 import './Card.css'
-import img from '../../assets/imgs/img3.png'
+import defaultImg from '../../assets/imgs/img3.png'
 import Btn from '../btn/Btn'
 
 
-export default function Card() {
+export default function Card({ img, status, currentStatus }) {
     return (
         <div className='card' >
             <div className="card-img"
-                style={{ backgroundImage: `url(${img})` }}
+                style={{ backgroundImage: `url(${img ?? defaultImg})` }}
             >
-                <span className='card-status'>Tenant-Occupied</span>
+                <span className='card-status'>{status ?? 'Tenant Occupied'}</span>
+                {currentStatus && <div
+                    className='card-current-status'
+                    style={{
+                        backgroundColor: currentStatus === 'New' ? '#4DAD49' : currentStatus === 'Sold' ? 'red' : 'orange'
+                    }}
+                >{currentStatus}</div>}
             </div>
             <div className="card-distribution">
                 <div className='card-section' >
